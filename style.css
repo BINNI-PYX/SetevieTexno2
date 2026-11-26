@@ -1,0 +1,169 @@
+/* Общие настройки для всей страницы*/
+body {
+    margin: 5px;
+    font-family: Arial, sans-serif;
+    color: #222222;
+}
+
+/* Верхнее меню */
+.menu {
+    padding: 5px;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu .active {
+    background: #4da9e8;
+    color: white;
+}
+
+/* Голубая полоса */
+.search-line {
+    background: #4da9e8;
+    color: white;
+    padding: 12px;
+    overflow: hidden;
+}
+
+.search-line form {
+    float: right;
+}
+
+.search-line button {
+    background: #0879bd;
+    color: white;
+    border: 0;
+    padding: 5px 12px;
+}
+
+/* Верхний ряд изображений */
+.gallery {
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 24%;
+    padding: 3px;
+    vertical-align: top;
+}
+
+.gallery-item img {
+    width: 100%;
+}
+
+/* Небольшие карточки */
+.small-cards {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.small-card {
+    display: inline-block;
+    width: 24%;
+    padding: 10px 5px;
+    vertical-align: top;
+}
+
+.small-card img {
+    width: 40%;
+}
+
+.small-card p {
+    margin: 5px;
+}
+/*групировка селекторов*/
+.small-card a,
+.article a,
+.side-card a {
+    color: #805000;
+}
+
+/* Основная часть страницы */
+.main {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.left-column {
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+}
+
+.right-column {
+    display: inline-block;
+    width: 28%;
+    margin-left: 1%;
+    vertical-align: top;
+}
+
+/* Блоки с текстом и изображениями */
+.article {
+    border: 1px solid #aaaaaa;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.article img {
+    float: left;
+    width: 30%;
+    margin-right: 15px;
+}
+
+.article-text {
+    overflow: hidden;
+}
+
+.article h2 {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.article p {
+    line-height: 1.5;
+}
+
+/* Во втором блоке изображение находится справа */
+.article.reverse img {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* Правая колонка */
+.side-card {
+    border: 1px solid #b8d9ef;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.side-card img {
+    display: block;
+    width: 65%;
+    margin: 10px auto;
+}
+
+.side-card p {
+    line-height: 1.5;
+    text-align: left;
+}
+
+/*  Именование*/
+.footer {
+    background: #4da9e8;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}

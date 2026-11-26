@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Каталог мониторов</title>
+</head>
+<body>
+
+<div>
+    <h1>Мониторы</h1>
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="monitor.html">Описание монитора</a></li>
+        <li><a href="table.html"><b>Каталог мониторов</b></a></li>
+    </ul>
+</div>
+<hr>
+
+<div>
+    <details>
+        <summary>График</summary>
+        <form>
+            <p><b>Значение по оси OX</b></p>
+            <div>
+                <input type="radio" id="x_brand" name="axisX" value="brand"><label for="x_brand">Бренд</label>
+            </div>
+            <div>
+                <input type="radio" id="x_country" name="axisX" value="country"><label for="x_country">Страна бренда</label>
+            </div>
+            <div>
+                <input type="radio" id="x_resolution" name="axisX" value="resolution"><label for="x_resolution">Разрешение экрана</label>
+            </div>
+            <p><b>Значение по оси OY</b></p>
+            <div>
+                <input type="checkbox" id="y_refresh_max" name="axisY" value="refreshMax"><label for="y_refresh_max">Максимальная частота обновления, Гц</label>
+            </div>
+            <div>
+                <input type="checkbox" id="y_refresh_min" name="axisY" value="refreshMin"><label for="y_refresh_min">Минимальная частота обновления, Гц</label>
+            </div>
+            <div>
+                <input type="checkbox" id="y_refresh_avg" name="axisY" value="refreshAverage"><label for="y_refresh_avg">Средняя частота обновления, Гц</label>
+            </div>
+            <p><button type="button">Построить</button></p>
+        </form>
+    </details>
+
+    <details>
+        <summary>Фильтр</summary>
+        <form>
+            <p><label for="f_name">Модель или серия:</label> <input type="text" id="f_name" name="name"></p>
+            <p><label for="f_brand">Бренд:</label> <input type="text" id="f_brand" name="brand"></p>
+            <p><label for="f_country">Страна бренда:</label> <input type="text" id="f_country" name="country"></p>
+            <p><label for="f_refresh_from">Частота обновления, Гц: от</label> <input type="number" id="f_refresh_from" name="refreshFrom" min="0" step="1" max="10000"> <label for="f_refresh_to">до</label> <input type="number" id="f_refresh_to" name="refreshTo" min="0" step="1"></p>
+            <p><label for="f_resolution">Разрешение экрана:</label> <input type="text" id="f_resolution" name="resolution" placeholder="Например, 2560x1440"></p>
+            <p><button type="button">Найти</button></p>
+        </form>
+    </details>
+
+    <details>
+        <summary>Сортировка</summary>
+        <form>
+            <p><label for="s1">Первый уровень:</label>
+                <select id="s1" name="sort1">
+                    <option value="none">Нет</option>
+                    <option value="name">Модель или серия</option>
+                    <option value="brand">Бренд</option>
+                    <option value="country">Страна бренда</option>
+                    <option value="resolution">Разрешение экрана</option>
+                    <option value="refresh">Частота обновления</option>
+                </select>
+                <input type="checkbox" id="s1d" name="desc1"><label for="s1d">по убыванию?</label></p>
+            <p><label for="s2">Второй уровень:</label>
+                <select id="s2" name="sort2">
+                    <option value="none">Нет</option>
+                    <option value="name">Модель или серия</option>
+                    <option value="brand">Бренд</option>
+                    <option value="country">Страна бренда</option>
+                    <option value="resolution">Разрешение экрана</option>
+                    <option value="refresh">Частота обновления</option>
+                </select>
+                <input type="checkbox" id="s2d" name="desc2"><label for="s2d">по убыванию?</label></p>
+            <p><label for="s3">Третий уровень:</label>
+                <select id="s3" name="sort3">
+                    <option value="none">Нет</option>
+                    <option value="name">Модель или серия</option>
+                    <option value="brand">Бренд</option>
+                    <option value="country">Страна бренда</option>
+                    <option value="resolution">Разрешение экрана</option>
+                    <option value="refresh">Частота обновления</option>
+                </select>
+                <input type="checkbox" id="s3d" name="desc3"><label for="s3d">по убыванию?</label></p>
+            <p><button type="button">Сортировать</button></p>
+        </form>
+    </details>
+
+    <table border="1" cellpadding="5">
+        <thead></thead>
+        <tr><th>Модель или серия</th><th>Бренд</th><th>Страна бренда</th><th>Частота обновления</th><th>Разрешение экрана</th></tr>
+        </thead>
+        <tbody>
+        <tr><td>Xiaomi G27Qi</td><td>Xiaomi</td><td>Китай</td><td>180</td><td>2560x1440</td></tr>
+        <tr><td>Xiaomi G34WQi</td><td>Xiaomi</td><td>Китай</td><td>180</td><td>3440x1440</td></tr>
+        <tr><td>Xiaomi A27i</td><td>Xiaomi</td><td>Китай</td><td>100</td><td>1920x1080</td></tr>
+        <tr><td>Redmi G27</td><td>Redmi</td><td>Китай</td><td>165</td><td>1920x1080</td></tr>
+        <tr><td>Odyssey G5 G55C</td><td>Samsung</td><td>Южная Корея</td><td>165</td><td>2560x1440</td></tr>
+        <tr><td>Odyssey G6 G60SD</td><td>Samsung</td><td>Южная Корея</td><td>360</td><td>2560x1440</td></tr>
+        <tr><td>Odyssey G7 G70B</td><td>Samsung</td><td>Южная Корея</td><td>144</td><td>3840x2160</td></tr>
+        <tr><td>Odyssey OLED G8 G80SD</td><td>Samsung</td><td>Южная Корея</td><td>240</td><td>3840x2160</td></tr>
+        <tr><td>Odyssey Neo G7 G75NB</td><td>Samsung</td><td>Южная Корея</td><td>165</td><td>3840x2160</td></tr>
+        <tr><td>Odyssey OLED G9 G95SC</td><td>Samsung</td><td>Южная Корея</td><td>240</td><td>5120x1440</td></tr>
+        <tr><td>MAG 274QRF QD E2</td><td>MSI</td><td>Тайвань</td><td>180</td><td>2560x1440</td></tr>
+        <tr><td>MAG 275QF</td><td>MSI</td><td>Тайвань</td><td>180</td><td>2560x1440</td></tr>
+        <tr><td>MAG 274UPF</td><td>MSI</td><td>Тайвань</td><td>144</td><td>3840x2160</td></tr>
+        <tr><td>MPG 271QRX QD-OLED</td><td>MSI</td><td>Тайвань</td><td>360</td><td>2560x1440</td></tr>
+        <tr><td>MPG 321URX QD-OLED</td><td>MSI</td><td>Тайвань</td><td>240</td><td>3840x2160</td></tr>
+        <tr><td>MAG 321UPX QD-OLED</td><td>MSI</td><td>Тайвань</td><td>240</td><td>3840x2160</td></tr>
+        <tr ><td>UltraGear 27GP850-B</td><td>LG</td><td>Южная Корея</td><td>165</td><td>2560x1440</td></tr>
+        <tr><td>UltraGear 27GR95QE-B</td><td>LG</td><td>Южная Корея</td><td>240</td><td>2560x1440</td></tr>
+        <tr><td>UltraGear 32GS95UE-B</td><td>LG</td><td>Южная Корея</td><td>240</td><td>3840x2160</td></tr>
+        <tr><td>UltraGear 34GP63A-B</td><td>LG</td><td>Южная Корея</td><td>160</td><td>3440x1440</td></tr>
+        <tr><td>UltraGear 27GN800-B</td><td>LG</td><td>Южная Корея</td><td>144</td><td>2560x1440</td></tr>
+        <tr><td>UltraGear 45GS95QE-B</td><td>LG</td><td>Южная Корея</td><td>240</td><td>3440x1440</td></tr>
+        <tr><td>UltraSharp U2723QE</td><td>Dell</td><td>США</td><td>60</td><td>3840x2160</td></tr>
+        <tr><td>UltraSharp U2724D</td><td>Dell</td><td>США</td><td>120</td><td>2560x1440</td></tr>
+        <tr><td>UltraSharp U3223QE</td><td>Dell</td><td>США</td><td>60</td><td>3840x2160</td></tr>
+        <tr><td>UltraSharp U3425WE</td><td>Dell</td><td>США</td><td>120</td><td>3440x1440</td></tr>
+        <tr><td>G2724D</td><td>Dell</td><td>США</td><td>165</td><td>2560x1440</td></tr>
+        <tr><td>Alienware AW2725DF</td><td>Dell</td><td>США</td><td>360</td><td>2560x1440</td></tr>
+        <tr><td>ROG Swift PG27AQDM</td><td>ASUS</td><td>Тайвань</td><td>240</td><td>2560x1440</td></tr>
+        <tr><td>ROG Swift PG32UCDM</td><td>ASUS</td><td>Тайвань</td><td>240</td><td>3840x2160</td></tr>
+        <tr><td>ROG Swift PG42UQ</td><td>ASUS</td><td>Тайвань</td><td>138</td><td>3840x2160</td></tr>
+        <tr><td>ROG Strix XG27AQMR</td><td>ASUS</td><td>Тайвань</td><td>300</td><td>2560x1440</td></tr>
+        <tr><td>TUF Gaming VG27AQ</td><td>ASUS</td><td>Тайвань</td><td>165</td><td>2560x1440</td></tr>
+        <tr><td>ProArt PA279CRV</td><td>ASUS</td><td>Тайвань</td><td>60</td><td>3840x2160</td></tr>
+        <tr><td>Infinity 27H1</td><td>Ardor</td><td>Россия</td><td>165</td><td>2560x1440</td></tr>
+        <tr><td>Gaming Portal AF27H1</td><td>Ardor</td><td>Россия</td><td>165</td><td>2560x1440</td></tr>
+        <tr><td>Gaming Portal AF24H1</td><td>Ardor</td><td>Россия</td><td>165</td><td>1920x1080</td></tr>
+        <tr><td>Infinity 24H1</td><td>Ardor</td><td>Россия</td><td>100</td><td>1920x1080</td></tr>
+        <tr><td>Studio Display</td><td>Apple</td><td>США</td><td>60</td><td>5120x2880</td></tr>
+        <tr><td>Pro Display XDR</td><td>Apple</td><td>США</td><td>60</td><td>6016x3384</td></tr>
+        <tr><td>Predator X27U</td><td>Acer</td><td>Тайвань</td><td>240</td><td>2560x1440</td></tr>
+        <tr><td>Nitro XV272U</td><td>Acer</td><td>Тайвань</td><td>170</td><td>2560x1440</td></tr>
+        <tr><td>MOBIUZ EX2710Q</td><td>BenQ</td><td>Тайвань</td><td>165</td><td>2560x1440</td></tr>
+        <tr><td>ZOWIE XL2546K</td><td>BenQ</td><td>Тайвань</td><td>240</td><td>1920x1080</td></tr>
+        <tr><td>Q27G3XMN</td><td>AOC</td><td>Китай</td><td>180</td><td>2560x1440</td></tr>
+        <tr><td>24G2SP</td><td>AOC</td><td>Китай</td><td>165</td><td>1920x1080</td></tr>
+        <tr><td>M27Q</td><td>Gigabyte</td><td>Тайвань</td><td>170</td><td>2560x1440</td></tr>
+        <tr><td>M32U</td><td>Gigabyte</td><td>Тайвань</td><td>144</td><td>3840x2160</td></tr>
+        <tr><td>Evnia 27M2N5500</td><td>Philips</td><td>Нидерланды</td><td>180</td><td>2560x1440</td></tr>
+        <tr><td>OMEN 27q</td><td>HP</td><td>США</td><td>165</td><td>2560x1440</td></tr>
+        <tr><td>Legion Y27q-30</td><td>Lenovo</td><td>Китай</td><td>180</td><td>2560x1440</td></tr>
+        <tr><td>XG270QG</td><td>ViewSonic</td><td>США</td><td>165</td><td>2560x1440</td></tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+
+</body>
+</html>
